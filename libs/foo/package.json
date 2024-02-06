@@ -1,0 +1,14 @@
+{
+  "name": "@libs/foo",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,35 @@
+{
+  "name": "app",
+  "version": "0.0.0-dev",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "npm run eslint && npm run test:r",
+    "test:r": "vitest run src",
+    "test:w": "vitest watch src",
+    "eslint": "eslint \"src/**/*.{ts,tsx}\"",
+    "eslint:w": "watch \"npm run eslint\" src",
+    "eslint:fix": "npm run eslint -- --fix",
+    "tscheck": "tsc --noEmit",
+    "tscheck:w": "npm run tscheck -- --watch"
+  },
+  "dependencies": {
+    "antd": "^5.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.2.1",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3",
+    "cssnano-preset-default": "^6.0.3",
+    "happy-dom": "^13.3.8",
+    "tailwindcss": "^3.4.1"
+  }
+}
