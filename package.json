@@ -6,6 +6,11 @@
     "app",
     "libs/*"
   ],
+  "scripts": {
+    "dev": "vite",
+    "build:app": "tsc && vite build",
+    "build:api": "vite build --ssr --mode=production"
+  },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^20.11.16",

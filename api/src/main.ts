@@ -6,23 +6,11 @@ import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHt
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import { resolvers, typeDefs } from './resolvers';
 
 interface MyContext {
   token?: String;
 }
-// Construct a schema, using GraphQL schema language
-const typeDefs = `
-  type Query {
-    hello: String
-  }
-`;
-
-// Provide resolver functions for your schema fields
-const resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-  },
-};
 
 // Required logic for integrating with Express
 export const app = express();

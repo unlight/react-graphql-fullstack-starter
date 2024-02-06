@@ -1,4 +1,4 @@
-import { meaningOfLife } from '@monorepo-playground4/foo';
+import { meaningOfLife } from '@libs/foo';
 
 export default {
   'meaningOfLife is': meaningOfLife,
