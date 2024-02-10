@@ -12,7 +12,7 @@ export default function (env: ConfigEnv): UserConfigExport {
 
 const apiMain = path.resolve('./api/src/main.ts');
 
-const apiConfig = ({}: ConfigEnv) => {
+const apiConfig = (env: ConfigEnv) => {
   return defineConfig({
     plugins: [tsconfigPaths()],
     resolve: {
@@ -28,7 +28,8 @@ const apiConfig = ({}: ConfigEnv) => {
   });
 };
 
-const appConfig = ({}: ConfigEnv) => {
+const appConfig = (env: ConfigEnv) => {
+  const isBuild = env.command == 'build';
   const rootSource = './app/src';
 
   return defineConfig({
@@ -50,7 +51,7 @@ const appConfig = ({}: ConfigEnv) => {
       },
     },
     build: {
-      outDir: './dist/app',
+      outDir: path.resolve('./dist/app'),
       assetsDir: '.',
     },
   });
