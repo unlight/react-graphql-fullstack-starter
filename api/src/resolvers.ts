@@ -1,5 +1,5 @@
 // Construct a schema, using GraphQL schema language
-export const typeDefs = `
+export const typeDefs = /* GraphQL */ `
   type Query {
     hello: String
   }
@@ -8,6 +8,8 @@ export const typeDefs = `
 // Provide resolver functions for your schema fields
 export const resolvers = {
   Query: {
-    hello: () => 'Hello world!',
+    hello: (source, args, contextValue, info) => {
+      return 'Hello world!';
+    },
   },
 };

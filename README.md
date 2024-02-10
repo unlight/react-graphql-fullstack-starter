@@ -12,3 +12,7 @@
 - Docker
 
 ## Resources
+
+## Issues
+
+- Attach break point in chrome inspector for server doesn't work (but insert code `debugger`)
