@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "vite",
     "build:app": "tsc && vite build",
-    "build:api": "vite build --ssr --mode=production"
+    "build:api": "vite build --ssr --mode=production",
+    "test:app:r": "vitest run .",
+    "test:app:w": "vitest watch ."
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

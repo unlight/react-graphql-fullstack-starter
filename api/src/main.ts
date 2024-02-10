@@ -1,12 +1,12 @@
 /// <reference types="vite/client" />
-import http from 'http';
+import { resolvers, typeDefs } from './resolvers';
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
-import express from 'express';
-import cors from 'cors';
 import bodyParser from 'body-parser';
-import { resolvers, typeDefs } from './resolvers';
+import cors from 'cors';
+import express from 'express';
+import http from 'http';
 
 interface MyContext {
   token?: String;
@@ -42,7 +42,7 @@ app.use(
   }),
 );
 
-if (import.meta.env.PROD) {
+if (import.meta.env?.PROD) {
   // Modified server startup
   httpServer.listen(3000);
 }

@@ -5,4 +5,12 @@ module.exports = {
   semi: true,
   singleQuote: true,
   arrowParens: 'avoid',
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  plugins: [
+    '@trivago/prettier-plugin-sort-imports',
+  ],
+  tailwindConfig: './tailwind.config.js',
+  tailwindFunctions: ['clsx', 'cn', 'cva'],
+  customFunctions: ['clsx', 'cn', 'cva'],
 };
