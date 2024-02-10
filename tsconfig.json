@@ -1,11 +1,23 @@
 {
-  "extends": "./tsconfig.build.json",
   "compilerOptions": {
+    "module": "esnext",
+    "strict": true,
+    "target": "es2020",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "types": [],
     "baseUrl": ".",
     "paths": {
       "@libs/components/*": ["packages/components/src/*"],
       "@libs/*": ["libs/*/src"]
     },
     "noEmit": true
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
