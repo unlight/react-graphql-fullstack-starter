@@ -6,6 +6,7 @@
 - `npm run build:app`
 - `npm run build:api`
 - `npm run test:app:r`
+- `npm run --node-options --inspect dev`
 
 ## Todo
 
